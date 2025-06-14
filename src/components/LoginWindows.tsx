@@ -6,22 +6,22 @@ export default function LoginWindows() {
     { text: "Password", type: "password" },
   ];
   return (
-    <div className="flex items-center w-full">
-      <div className="w-8/12">
+    <div className="flex items-center p-5 md:p-0 justify-center h-full md:w-full">
+      <div className="w-full md:w-1/2 flex flex-col gap-y-2">
         <div className="flex flex-col items-center">
           <img src="/logo.png" />
         </div>
-        <div className="flex flex-col mx-auto w-5/12  mt-10 text-black">
+        <div className="flex flex-col gap-y-4 mx-auto w-full mt-10 text-black">
           {form.map(({ text, type }) => (
             <input
               key={text}
-              className="bg-white px-4 mt-4 h-14 rounded-2xl"
+              className="bg-white px-4 h-14 rounded-2xl"
               type={type}
               placeholder={text}
             />
           ))}
           <div className="flex justify-between items-center">
-            <div className=" text-white">
+            <div className="text-white">
               <input type="checkbox" className="" />
               Remember me
             </div>
@@ -32,22 +32,20 @@ export default function LoginWindows() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col mx-auto w-5/12 mt-20">
+        <div className="flex flex-col mx-auto w-full mt-20 text-white">
           <div className="">
             Don't have an account?
             <Link href="/" className="text-green-500 ml-2">
               Register
             </Link>
           </div>
-          <Link
-            href="/dashboard"
-            className="w-full text-center place-content-center items-center h-16 bg-emerald-500 mt-2 rounded-2xl text-2xl">
-            Login
-          </Link>
         </div>
-      </div>
-      <div className="bg-emerald-500 w-4/12 min-h-screen rounded-4xl">
-        <div className="w-50 h-50 bg-emerald-600 rounded-full ml-10 mt-5"></div>
+
+        <Link
+          href="/dashboard"
+          className="w-full text-center place-content-center items-center h-16 bg-emerald-500 mt-2 rounded-2xl text-2xl">
+          Login
+        </Link>
       </div>
     </div>
   );

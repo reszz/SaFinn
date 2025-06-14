@@ -1,10 +1,13 @@
-import Image from "next/image";
-import SignUpWindows from "@/components/SignUpWindows";
+import Dashboard from "@/components/Dashboard";
+import DashboardLayout from "@/components/templates/DashboardLayout";
+import React from "react";
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="bg-gray-900 min-h-screen ">
-      <SignUpWindows />
-    </div>
+    <DashboardLayout>
+      <Dashboard />
+    </DashboardLayout>
   );
-}
+};
+
+export default page;

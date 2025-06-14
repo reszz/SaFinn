@@ -1,10 +1,8 @@
-import Link from "next/link";
-import LoginWindows from "@/components/LoginWindows";
+import LoginWindows from "@components/LoginWindows";
+import React from "react";
 
-export default function Home() {
-  return (
-    <div className="flex items-center bg-gray-900 min-h-screen">
-      <LoginWindows />
-    </div>
-  );
-}
+const page = () => {
+  return <LoginWindows />;
+};
+
+export default page;
